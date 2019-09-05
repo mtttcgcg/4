@@ -1,0 +1,16 @@
+on: [push]
+  #schedule:
+    # * is a special character in YAML so you have to quote this string
+    #- cron:  '*/5 * * * *'
+
+jobs:
+  my_first_job:
+    name: My first job
+    runs-on: ubuntu-latest
+    container: appropriate/curl
+    steps:
+    #- name: Call Github API
+#      uses: docker://appropriate/curl
+    - name: say hi
+      run: |
+        echo HELLO2!

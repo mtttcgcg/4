@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     container: appropriate/curl
     steps:
-    - name: check token
-      env:
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        echo $TOKEN
+    #- name: check token
+    #  env:
+    #    TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #  run: |
+    #    echo $TOKEN
     - name: curl it
       run: |
         curl -X PUT https://api.github.com/repos/mtttcgcg/2/branches/master/protection -H 'accept: application/vnd.github.luke-cage-preview+json' -H 'authorization: Basic $TOKEN' -H 'cache-control: no-cache' -d '{ "required_status_checks": null, "enforce_admins": true, "required_pull_request_reviews": null, "restrictions": null }'

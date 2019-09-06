@@ -5,9 +5,12 @@ jobs:
     name: My first job
     runs-on: ubuntu-latest
     steps:
-    - name: print
+    - name: rename
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        export TOKEN="$GITHUB_TOKEN"
+    - name: print
       run: |
         set
     - name: curl

@@ -12,7 +12,7 @@ jobs:
         export TOKEN=$GITHUB_TOKEN
     - name: print
       run: |
-        echo $TOKEN
+        set
     - name: curl
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

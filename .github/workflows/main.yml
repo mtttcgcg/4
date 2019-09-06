@@ -17,4 +17,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        curl -X PUT https://api.github.com/repos/mtttcgcg/4/branches/master/protection -H 'accept: application/vnd.github.luke-cage-preview+json' -H 'authorization: token $GITHUB_TOKEN' -H 'cache-control: no-cache' -d '{ "required_status_checks": null, "enforce_admins": true, "required_pull_request_reviews": null, "restrictions": null }'
+        curl -X PUT https://api.github.com/repos/mtttcgcg/4/branches/master/protection -H 'accept: application/vnd.github.machine-man-preview+json' -H 'authorization: token $GITHUB_TOKEN' -H 'cache-control: no-cache' -d '{ "required_status_checks": null, "enforce_admins": true, "required_pull_request_reviews": null, "restrictions": null }'

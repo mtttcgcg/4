@@ -9,7 +9,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        export STUFF="$GITHUB_TOKEN" && echo ${STUFF:0}
+        export STUFF="$GITHUB_TOKEN" && echo ${STUFF:0:10}
     - name: print
       run: |
         set

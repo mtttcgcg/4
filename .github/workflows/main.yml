@@ -5,16 +5,8 @@ jobs:
     name: My first job
     runs-on: ubuntu-latest
     steps:
-    - name: rename
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        export STUFF="$GITHUB_TOKEN" && echo ${STUFF:0:10} && echo ${STUFF:10}
-    - name: print
-      run: |
-        set
     - name: curl
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        curl -X PUT https://api.github.com/repos/mtttcgcg/4/branches/master/protection -H 'accept: application/vnd.github.luke-cage-preview+json' -H 'authorization: Basic "$GITHUB_TOKEN"' -H 'cache-control: no-cache' -d '{ "required_status_checks": null, "enforce_admins": true, "required_pull_request_reviews": null, "restrictions": null }'
+        curl -X PUT https://api.github.com/repos/mtttcgcg/4/branches/master/protection -H 'accept: application/vnd.github.luke-cage-preview+json' -H "Authorization: Basic $GITHUB_TOKEN" -H 'cache-control: no-cache' -d '{ "required_status_checks": null, "enforce_admins": true, "required_pull_request_reviews": null, "restrictions": null }'

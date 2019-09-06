@@ -9,9 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     container: appropriate/curl
     steps:
-    - name: say hi
-      run: |
-        echo HELLO2!
     - name: check token
       env:
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
